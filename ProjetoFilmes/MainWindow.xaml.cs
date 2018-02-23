@@ -15,6 +15,11 @@ namespace ProjetoFilmes
 
         private void btnClean_Click(object sender, RoutedEventArgs e)
         {
+            clearFields();
+        }
+
+        private void clearFields()
+        {
             txtName.Text = "";
             txtGenre.Text = "";
             txtDirector.Text = "";
@@ -30,6 +35,7 @@ namespace ProjetoFilmes
             movies = movies.OrderBy(m => m.Name).ToList();
             dtgMovies.ItemsSource = movies;
 
+            clearFields();
         }
     }
 }

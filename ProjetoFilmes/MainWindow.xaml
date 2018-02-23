@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoFilmes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Netfilmes" Height="210" Width="667.561">
     <Grid>
-        
+        <Label x:Name="label" Content="Nome: " HorizontalAlignment="Left" Margin="24,28,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Gênero: " HorizontalAlignment="Left" Margin="24,59,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Diretor: " HorizontalAlignment="Left" Margin="24,90,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="77,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtGenre" HorizontalAlignment="Left" Height="23" Margin="77,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDirector" HorizontalAlignment="Left" Height="23" Margin="77,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnRegister" Content="Cadastrar" HorizontalAlignment="Left" Margin="122,138,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnClean" Content="Limpar" HorizontalAlignment="Left" Margin="24,138,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="280,28,0,0" VerticalAlignment="Top" Height="129" Width="341">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Name}" Header="Nome" />
+                <DataGridTextColumn Binding="{Binding Path=Genre}" Header="Gênero" />
+                <DataGridTextColumn Binding="{Binding Path=Director}" Header="Diretor" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
